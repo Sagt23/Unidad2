@@ -14,7 +14,8 @@ public class Controller {
     @FXML ComboBox idCmb;
     @FXML Label lblResultado;
     @FXML protected void initialize (){
-        idCmb.getItems().addAll("db", "count", "Dos nombres", "MAC", "Aa", "Binario", "Hexadecimal", "Operacion", "No. control", "CURP");
+        idCmb.getItems().addAll("db", "count", "Dos nombres", "MAC", "Aa", "Binario", "Hexadecimal", "Operacion", "No. control", "CURP",
+                "Pesos", "Tarjeta", "HTML", "Hexa", "Link", "Query", "If", "Salto", "YouTube");
     }
     public void procesar(){
         int seleccion=idCmb.getSelectionModel().getSelectedIndex();
@@ -59,6 +60,42 @@ public class Controller {
             }
             case 9: {
                 expresion="";
+                break;
+            }
+            case 10: {
+                expresion="^[$][0-9]";
+                break;
+            }
+            case 11: {
+                expresion="[0-9]{16}";
+                break;
+            }
+            case 12: {
+                expresion="^[<][a-z][>]$";
+                break;
+            }
+            case 13: {
+                expresion="^[#][A-F0-9]{7}";
+                break;
+            }
+            case 14: {
+                expresion="^[https://][a-zA-Z0-9][.com]$";
+                break;
+            }
+            case 15: {
+                expresion="";
+                break;
+            }
+            case 16: {
+                expresion="";
+                break;
+            }
+            case 17: {
+                expresion="";
+                break;
+            }
+            case 18: {
+                expresion="^[https://www.youtube.com/watch?][a-zA-Z0-9]{13}$";
                 break;
             }
         }
